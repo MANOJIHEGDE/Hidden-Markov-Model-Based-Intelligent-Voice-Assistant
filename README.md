@@ -11,7 +11,8 @@ https://github.com/MANOJIHEGDE
 
 MANVITHA SHIVALINGAPPA
 
-Results
+RESULTS
+
 ScreenShots
 
 ![image](https://github.com/MANOJIHEGDE/Hidden-Markov-Model-Based-Intelligent-Voice-Assistant/assets/116331003/c39dc654-7dc8-4d7f-95d5-a13c0ef22549)
@@ -26,6 +27,6 @@ ScreenShots
 
 ![image](https://github.com/MANOJIHEGDE/Hidden-Markov-Model-Based-Intelligent-Voice-Assistant/assets/116331003/2017eabc-b607-4ac6-bc05-90d8712cbbe8)
 
-![image](https://github.com/MANOJIHEGDE/Hidden-Markov-Model-Based-Intelligent-Voice-Assistant/assets/116331003/d8498bc2-4641-4f89-b624-ec37c5652fa1)
+
 
 
