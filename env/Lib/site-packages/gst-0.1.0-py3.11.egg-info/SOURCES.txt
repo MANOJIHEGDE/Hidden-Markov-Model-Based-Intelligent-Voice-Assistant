@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+colors.py
+gst.py
+setup.cfg
+setup.py
+gst.egg-info/PKG-INFO
+gst.egg-info/SOURCES.txt
+gst.egg-info/dependency_links.txt
+gst.egg-info/entry_points.txt
+gst.egg-info/top_level.txt
