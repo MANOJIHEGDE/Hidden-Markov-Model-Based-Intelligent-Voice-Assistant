@@ -4,7 +4,9 @@ A Hidden Markov Model Based Intelligent Voice Assistant is designed and implemen
 The existing assistants available for Windows (i.e., Cortana or any other custom-built assistant which are available on the web) offer general features. Moreover, in these systems majority of times, when the command is not recognized they tend to give some random web results. Whereas our assistant is one of the most advanced assistant system available for Windows right now, which is capable of performing almost all needed tasks. It can send an email or obtain weather reports of the current city or another city that user wants to know or play songs from the desktop or search for any information on Wikipedia or perform a Google search or perform YouTube search etc. Some of the exclusive features of our assistant is sending a message via Whatsapp, playing any song from Spotify, asking it to read out the latest news, asking it to tell a joke, and opening any kind of system app such as a camera, calculator, and user can also make the system to shut down or sleep or hibernate. If the user is familiar with basic English, then he can experi-ence all the feature of our assistant.
 
 Team Members
+
 MANOJ HEGDE
+
 https://github.com/MANOJIHEGDE
 
 MANVITHA SHIVALINGAPPA
