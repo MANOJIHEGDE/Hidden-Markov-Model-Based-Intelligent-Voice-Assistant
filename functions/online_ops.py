@@ -25,8 +25,8 @@ def search_on_google(query):
 def send_whatsapp_message(number, message):
     kit.sendwhatmsg_instantly(f"+91{number}", message)
 
-EMAIL = "manvithamp@gmail.com"
-PASSWORD = "rickyrinkymanu"
+EMAIL = "Your email id"
+PASSWORD = "Your email password"
 
 
 def send_email(receiver_address, subject, message):
@@ -47,7 +47,7 @@ def send_email(receiver_address, subject, message):
         return False
     
 
-NEWS_API_KEY = "005399d05dd44c479ea5cdb1fefa6c1f"
+NEWS_API_KEY = "News API ID"
 
 
 def get_latest_news():
@@ -59,7 +59,7 @@ def get_latest_news():
         news_headlines.append(article["title"])
     return news_headlines[:5]
 
-OPENWEATHER_APP_ID = "6196b067ceef529a5511d6ce3bc352b8"
+OPENWEATHER_APP_ID = "Your weather api key"
 
 
 def get_weather_report(city):
