@@ -4,7 +4,7 @@ import subprocess as sp
 paths = {
     'notepad': "C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2210.5.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe",
     
-    'discord': "C:\\Users\\hegde\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe",
+    'discord': "Path file to discord",
     'calculator': "C:\\Windows\\System32\\calc.exe"
 }
 
