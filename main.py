@@ -22,9 +22,9 @@ import subprocess
 USERNAME = "Manoj"
 BOTNAME = "Mister Bro"
 
-username = '31gyhwv6bk6o5jmrt7r2subki2pa'
-clientID = 'd7d744fdb3ff49a1984eb28c2353efa2'
-clientSecret = '61f589e000c847309b886b1d495b31ac'
+username = 'Your spotify username'
+clientID = 'Your client ID goes here'
+clientSecret = 'Your client secret goes here'
 redirect_uri = 'https://google.com/'
 oauth_object = spotipy.SpotifyOAuth(clientID, clientSecret, redirect_uri)
 token_dict = oauth_object.get_access_token()
