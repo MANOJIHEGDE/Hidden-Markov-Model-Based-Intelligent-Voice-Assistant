@@ -2,10 +2,16 @@ from winreg import QueryReflectionKey
 import pyttsx3.drivers
 import speech_recognition as sr 
 from datetime import datetime
+import pocketsphinx
+import openai
 
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
 import webbrowser
 import os
 import spotipy
+
 
 import requests
 import subprocess
@@ -65,16 +71,80 @@ def takeCommand():
         print("☆ ☆ ☆ ☆ Listening ☆ ☆ ☆ ☆")
         r.pause_threshold = 1
         audio = r.listen(source)
+        text = r.recognize_sphinx(audio)
+       
 
     try:
+
         print("Recognizing...")    
         query = r.recognize_google(audio, language='EN-in')
+        print(f"User initally told :{text}")
         print(f"User said: {query}\n")
+        num_samples = 1000
+        num_features = 20
+        X_text = np.random.rand(num_samples, num_features)
+        X_query = np.random.rand(num_samples, num_features)
 
+# Labels for demonstration purposes
+        y_text = np.random.randint(2, size=num_samples)
+        y_query = np.random.randint(2, size=num_samples)
+
+
+# Split data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(
+        np.concatenate((X_text, X_query), axis=0),
+        np.concatenate((y_text, y_query), axis=0),
+        test_size=0.8,
+        random_state=62
+        )
+
+# Train SVM model
+        svm_model = SVC()
+        svm_model.fit(X_train, y_train)
+
+# Predictions
+        y_pred = svm_model.predict(X_test)
+       
+
+# Calculate evaluation metrics
+        accuracy = accuracy_score(y_test, y_pred)
+        precision = precision_score(y_test, y_pred)
+        recall = recall_score(y_test, y_pred)
+        f1 = f1_score(y_test, y_pred)
+
+        print("Accuracy:", accuracy)
+        print("Precision:", precision)
+        print("Recall:", recall)
+        print("F1-score:", f1)
     except Exception as e:
    
         print("Say that again please...")  
         return "None"
+    return query
+
+     
+    
+   
+
+    
+def takeCommandk():
+   
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print("Listening...")
+        r.pause_threshold = 1
+        audio = r.listen(source)
+
+    try:
+        print("Recognizing...")    
+        query = r.recognize_google(audio, language='KN-in')
+        print(f"User said: {query}\n")
+
+    except Exception as e:
+      
+        print("Say that again please...")  
+        return "None"
+
     return query
 
 
